@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   my_package.algorithms
    my_package.data_structures
    my_package.package1
 
