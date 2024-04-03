@@ -1,4 +1,9 @@
+"""Stack Module"""
+
+
 class Stack:
+    """Stack Data Structure"""
+
     def __init__(self, initializer=None):
         self._list = initializer or []
 

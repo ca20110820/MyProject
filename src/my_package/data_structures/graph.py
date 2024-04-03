@@ -1,7 +1,10 @@
+"""Graph Data Structure Module"""
+
 from typing import List, Tuple, Hashable, Set
 
 
 class Graph:
+    """Base Class for Graphs."""
     def __init__(self):
         self._graph = {}  # Keep track of vertices' adjacency (we don't know who's the source or destination)
 
@@ -35,6 +38,7 @@ class Graph:
 
 
 class DirectedGraph(Graph):
+    """Digraph Data Structure"""
     def __init__(self):
         super().__init__()
         # self._allow_multi_edge = allow_multi_edge
@@ -78,6 +82,7 @@ class DirectedGraph(Graph):
 
 
 class UndirectedGraph(Graph):
+    """Undirected Graph Data Structure."""
     def __init__(self):
         super().__init__()
         self._edges = []

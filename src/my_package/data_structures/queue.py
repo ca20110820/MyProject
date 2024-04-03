@@ -1,4 +1,9 @@
+"""Queue Module"""
+
+
 class Queue:
+    """Custom Queue Data Structure"""
+
     def __init__(self, initializer=None):
         self._list = initializer or []
 

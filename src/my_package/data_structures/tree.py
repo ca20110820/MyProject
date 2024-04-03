@@ -1,8 +1,15 @@
+"""Module implementing the Tree Data Structure.
+
+Author: Cedric Anover
+"""
+
+
 class TreeInsertionError(Exception):
     pass
 
 
 def traverse_node(node):
+    """Recursively traverse a nodes and its descendants."""
     yield node
 
     for child in node.children:
@@ -13,6 +20,7 @@ def traverse_node(node):
 
 
 class Node:
+    """Node of a Tree"""
     def __init__(self, label="Node", data=None):
         self._parent = None
         self._children = []
@@ -115,6 +123,8 @@ class Node:
 
 
 class Tree:
+    """Tree Data Structure.
+    """
     def __init__(self, root_node) -> None:
         # Case: Given root_node is root in another tree
         # Case: Given root_node is internal in another tree

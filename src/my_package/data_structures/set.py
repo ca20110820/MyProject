@@ -1,4 +1,9 @@
+"""Set Module"""
+
+
 class Set:
+    """Custom Set Data Structure"""
+
     def __init__(self):
         self.elem_dict = {}
 

@@ -1,3 +1,5 @@
+"""Linked List Module"""
+
 from typing import Any
 
 
@@ -27,6 +29,8 @@ class _Node:
 
 
 class LinkedList:
+    """Singly Linked List Data Structure."""
+
     def __init__(self) -> None:
         self._head = None
         self._tail = None

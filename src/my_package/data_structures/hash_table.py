@@ -1,4 +1,9 @@
+"""Module for Map-like Data Structures"""
+
+
 class HashTable:
+    """Hash Table Data Structure."""
+
     def __init__(self, size: int):
         self.size = size
         self.table = [[] for _ in range(size)]
