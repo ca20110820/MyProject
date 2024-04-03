@@ -6,6 +6,9 @@ class Queue:
     def peek(self):
         return self._list[-1] if len(self._list) > 0 else None
 
+    def __len__(self):
+        return len(self._list)
+
     def __str__(self):
         return f"{self._list}"
 
