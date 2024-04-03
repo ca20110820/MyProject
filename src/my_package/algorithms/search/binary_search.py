@@ -1,4 +1,4 @@
-"""Module containing implementations of different search algorithms."""
+"""Module containing implementations of Binary Search Algorithm."""
 
 
 def binary_search(numbers, target):
