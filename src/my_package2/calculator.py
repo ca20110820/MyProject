@@ -23,3 +23,7 @@ class Calculator:
     @staticmethod
     def double_number(x):
         return x * 2
+    
+    @staticmethod
+    def square_number(x):
+        return x ** 2
