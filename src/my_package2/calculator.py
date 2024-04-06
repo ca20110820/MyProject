@@ -15,3 +15,7 @@ class Calculator:
     @staticmethod
     def divide(a, b):
         return a / b
+
+	@staticmethod
+	def modulo(a, b):
+		return a % b
