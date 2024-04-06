@@ -32,15 +32,16 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with unittest and calculate coverage
       run: |
-        coverage run -m unittest discover -p 'test_*.py' -s tests
-        coverage xml -o ./coverage.xml
+        cd src  # Change to src/ directory if your code is inside src/
+        coverage run -m unittest discover ../tests  # Update path to tests/ if different
+        coverage xml -o ../coverage.xml
     - name: Display current directory and list files
       run: |
         pwd
         ls -la
-    - name: Create Coverage
-      if: ${{ github.event_name == 'pull_request' }}
-      uses: orgoro/coverage@v3.1
-      with:
-          coverageFile: coverage.xml
-          token: ${{ secrets.GITHUB_TOKEN }}
+#    - name: Create Coverage
+#      if: ${{ github.event_name == 'pull_request' }}
+#      uses: orgoro/coverage@v3.1
+#      with:
+#          coverageFile: coverage.xml
+#          token: ${{ secrets.GITHUB_TOKEN }}
