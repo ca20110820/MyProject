@@ -18,6 +18,10 @@ class TestCalculator(unittest.TestCase):
     def test_multiply(self):
         result = Calculator.multiply(3, 2)
         self.assertEqual(result, 6)
+    
+    def test_double_number(self):
+        result = Calculator.double_number(5)
+        self.assertEqual(result, 10)
 
 
 if __name__ == "__main__":
