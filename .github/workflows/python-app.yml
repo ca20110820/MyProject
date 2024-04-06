@@ -39,9 +39,9 @@ jobs:
       run: |
         pwd
         ls -la
-    - name: Create Coverage
-      if: ${{ github.event_name == 'pull_request' }}
-      uses: orgoro/coverage@v3.1
-      with:
-          coverageFile: coverage.xml
-          token: ${{ secrets.GITHUB_TOKEN }}
+#    - name: Create Coverage
+#      if: ${{ github.event_name == 'pull_request' }}
+#      uses: orgoro/coverage@v3.1
+#      with:
+#          coverageFile: coverage.xml
+#          token: ${{ secrets.GITHUB_TOKEN }}
