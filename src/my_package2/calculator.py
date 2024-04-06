@@ -19,3 +19,7 @@ class Calculator:
     @staticmethod
     def modulo(a, b):
         return a % b
+    
+    @staticmethod
+    def double_number(x):
+        return x * 2
