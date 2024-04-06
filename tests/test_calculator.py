@@ -22,6 +22,10 @@ class TestCalculator(unittest.TestCase):
     def test_double_number(self):
         result = Calculator.double_number(5)
         self.assertEqual(result, 10)
+    
+    def test_square_number(self):
+        result = Calculator.square_number(2)
+        self.assertEqual(result, 4)
 
 
 if __name__ == "__main__":
