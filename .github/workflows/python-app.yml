@@ -2,9 +2,10 @@ name: Python Application
 
 on:
   push:
-    branches: [ "main" , "develop" ]
+    branches: [ "**" ]
   pull_request:
     branches: [ "main", "develop" ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -39,9 +40,9 @@ jobs:
       run: |
         pwd
         ls -la
-#    - name: Create Coverage
-#      if: ${{ github.event_name == 'pull_request' }}
-#      uses: orgoro/coverage@v3.1
-#      with:
-#          coverageFile: coverage.xml
-#          token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Archive coverage report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: coverage.xml
+      continue-on-error: true
